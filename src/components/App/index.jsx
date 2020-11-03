@@ -13,13 +13,16 @@ const App = () => {
 
   React.useEffect(() => {
     console.log('running the effect');
-    document.addEventListener('keydown', (e) => {console.log(e)});
-    return document.removeEventListener('keydown', captureKeyPress);
+    document.addEventListener('keydown', (e) => {
+      setDirection(e.key);
+    });
+    return document.removeEventListener('keydown', (e) => {
+      setDirection(e.key);
+    })
   }, []);
 
   return (
     <div>
-      <div className="test">Ssnake</div>
       <Board />
     </div>
   );
