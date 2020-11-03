@@ -2,8 +2,9 @@
   "name": "muliplayersnake",
   "version": "1.0.0",
   "description": "A multiplayer version the classic snake game.",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
+    "start": "node server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack --watch"
   },

@@ -3,7 +3,19 @@ import './style.css';
 import Board from '../Board';
 
 const App = () => {
-  const [direction, setDirection] = React.useState(() => 'l') //possible: 'l', 'r', 'u', 'd'
+  const [gameState, setGameState] = React.useState('on');
+  const [direction, setDirection] = React.useState(() => 'hl') //possible: 'hl', 'hr', 'vu', 'vd'
+
+  const captureKeyPress = (e) => {
+    console.log('running the captureKeyPress function');
+    console.log(e);
+  }
+
+  React.useEffect(() => {
+    console.log('running the effect');
+    document.addEventListener('keydown', (e) => {console.log(e)});
+    return document.removeEventListener('keydown', captureKeyPress);
+  }, []);
 
   return (
     <div>
