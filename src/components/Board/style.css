@@ -1,0 +1,14 @@
+#board {
+  background-color: palevioletred;
+  width: 800px;
+  display: grid;
+  grid-template-columns: repeat(20, 40px);
+  grid-template-rows: repeat(20, 40px);
+}
+
+.boardDiv {
+  min-height: 40px;
+  min-width: 40px;
+  color: palevioletred;
+  border: 1px solid black;
+}
